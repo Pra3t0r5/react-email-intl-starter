@@ -2,6 +2,8 @@
 
 A live preview right in your browser so you don't need to keep sending real emails during development. **Now with internationalization.**
 
+<img width="961" alt="Screenshot 2024-07-19 at 10 33 31 PM" src="https://github.com/user-attachments/assets/0988308f-984b-4a95-b057-a6fd93d22747">
+
 ## Getting Started
 
 First, install the dependencies:
