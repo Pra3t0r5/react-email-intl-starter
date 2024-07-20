@@ -1,0 +1,30 @@
+{
+  "name": "react-email-intl-starter",
+  "description": "Starter project for react-email with internationalization",
+  "version": "0.0.19",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm codegen && concurrently \"pnpm codegen:watch\" \"email dev --dir compiled\" -c \"bgGreen.bold,bgBlue.bold\" -n \"codegen,react-email\"",
+    "dev:deployable": "pnpm codegen --no-preview-props && concurrently \"pnpm codegen:watch --no-preview-props\" \"email dev --dir compiled\" -c \"bgGreen.bold,bgBlue.bold\" -n \"codegen,react-email\"",
+    "codegen": "node ./scripts/dev.mjs",
+    "codegen:watch": "pnpm codegen --watch",
+    "build": "NODE_ENV=production pnpm codegen && NODE_ENV=production email build --packageManager=pnpm --dir compiled",
+    "start": "NODE_ENV=production email start",
+    "export": "NODE_ENV=production pnpm codegen && NODE_ENV=production email export --pretty false --dir compiled"
+  },
+  "dependencies": {
+    "@react-email/components": "0.0.21",
+    "concurrently": "8.2.2",
+    "pascalcase": "^2.0.0",
+    "react": "^18.2.0",
+    "react-email": "2.1.5"
+  },
+  "devDependencies": {
+    "@nodelib/fs.walk": "2.0.0",
+    "@parcel/watcher": "2.4.1",
+    "@types/pascalcase": "1.0.3",
+    "@types/react": "18.2.33",
+    "@types/react-dom": "18.2.14",
+    "fs-extra": "11.2.0"
+  }
+}
