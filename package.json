@@ -1,8 +1,7 @@
 {
   "name": "react-email-intl-starter",
   "description": "Starter project for react-email with internationalization",
-  "version": "0.0.19",
-  "private": true,
+  "version": "0.0.1",
   "scripts": {
     "dev": "pnpm codegen && concurrently \"pnpm codegen:watch\" \"email dev --dir compiled\" -c \"bgGreen.bold,bgBlue.bold\" -n \"codegen,react-email\"",
     "dev:deployable": "pnpm codegen --no-preview-props && concurrently \"pnpm codegen:watch --no-preview-props\" \"email dev --dir compiled\" -c \"bgGreen.bold,bgBlue.bold\" -n \"codegen,react-email\"",
@@ -12,6 +11,13 @@
     "start": "NODE_ENV=production email start",
     "export": "NODE_ENV=production pnpm codegen && NODE_ENV=production email export --pretty false --dir compiled"
   },
+  "keywords": [
+    "emails",
+    "boilerplate",
+    "react"
+  ],
+  "author": "Pra3t0r5",
+  "license": "MIT",
   "dependencies": {
     "@react-email/components": "0.0.21",
     "concurrently": "8.2.2",
